@@ -1,14 +1,5 @@
 'use strict';
 
-/////////////////////////////////////////////////
-/////////////////////////////////////////////////
-// BANKIST APP
-
-/////////////////////////////////////////////////
-// Data
-
-// DIFFERENT DATA! Contains movement dates, currency and locale
-
 const account1 = {
   owner: 'Jonas Schmedtmann',
   movements: [200, 455.23, -306.5, 25000, -642.21, -133.9, 79.97, 1300],
@@ -26,7 +17,7 @@ const account1 = {
     '2020-08-01T10:51:36.790Z',
   ],
   currency: 'EUR',
-  locale: 'pt-PT', // de-DE
+  locale: 'pt-PT',
 };
 
 const account2 = {
@@ -361,17 +352,12 @@ btnClose.addEventListener('click', function (e) {
 let sorted = false;
 btnSort.addEventListener('click', function (e) {
   e.preventDefault();
-  // BUG in video:
-  // displayMovements(currentAccount.movements, !sorted);
 
-  // FIX:
   displayMovements(currentAccount, !sorted);
   sorted = !sorted;
 });
 
 /////////////////////////////////////////////////
-/////////////////////////////////////////////////
-// LECTURES
 
 /*
 ///////////////////////////////////////
